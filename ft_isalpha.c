@@ -6,23 +6,17 @@
 /*   By: jhavlick <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:31:12 by jhavlick          #+#    #+#             */
-/*   Updated: 2023/09/11 13:31:55 by jhavlick         ###   ########.fr       */
+/*   Updated: 2023/09/19 19:38:21 by jhavlick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h">
 
 int	ft_isalpha(int c)
 {
-	return (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')));
-}
-/*
-int	main(void)
-{
-	char	znak;
-	znak = '5';
-
-	printf("%d\n", ft_isalpha(znak));
+	if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'));
+	{
+		return (1);
+	}
 	return (0);
 }
-*/

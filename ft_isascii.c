@@ -6,11 +6,17 @@
 /*   By: jhavlick <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:31:39 by jhavlick          #+#    #+#             */
-/*   Updated: 2023/09/13 15:44:37 by jhavlick         ###   ########.fr       */
+/*   Updated: 2023/09/19 19:35:31 by jhavlick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	return ((c >= 0 && c <= 127));
+	if ((c >= 0 && c <= 127));
+	{
+		return (1);
+	}
+	return (0);
 }

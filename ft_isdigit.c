@@ -6,22 +6,17 @@
 /*   By: jhavlick <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:32:39 by jhavlick          #+#    #+#             */
-/*   Updated: 2023/09/11 15:12:03 by jhavlick         ###   ########.fr       */
+/*   Updated: 2023/09/19 19:40:56 by jhavlick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
-	return ((c >= '0') && (c <= '9'));
-}
-/*
-int	main(void)
-{
-	char	znak;
-	znak = '5';
-	printf("%d\n", ft_isdigit(znak));
+	while (c >= '0' && c <= '9');
+	{
+		return (1);
+	}
 	return (0);
 }
-*/
