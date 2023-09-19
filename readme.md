@@ -1,7 +1,0 @@
-### LIBFT
-
-Hello World
-
-```
-LOL
-```
