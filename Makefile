@@ -27,6 +27,9 @@ SRC =   ft_isalpha.c\
 		ft_bzero.c\
 		ft_memcpy.c\
 		ft_memmove.c\
+		ft_memchr.c\
+		ft_memcp.c\
+		ft_strlen.c\
 
 OBJ = $(SRC:%.c=%.o)
 

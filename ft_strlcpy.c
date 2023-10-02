@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhavlick <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 11:26:25 by jhavlick          #+#    #+#             */
-/*   Updated: 2023/09/19 19:44:09 by jhavlick         ###   ########.fr       */
+/*   Created: 2023/10/02 15:28:23 by jhavlick          #+#    #+#             */
+/*   Updated: 2023/10/02 15:32:05 by jhavlick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-	int	i;
-
-	if (!str)
-	{
-		return (NULL);
-	}
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	
 }
