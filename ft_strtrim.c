@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhavlick <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:16:27 by jhavlick          #+#    #+#             */
-/*   Updated: 2023/10/19 17:16:55 by jhavlick         ###   ########.fr       */
+/*   Created: 2023/10/19 17:58:06 by jhavlick          #+#    #+#             */
+/*   Updated: 2023/10/19 18:01:00 by jhavlick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	char	*str;
 
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (str == NULL)
+	if (s1 == NULL || set == NULL)
 	{
 		return (NULL);
 	}
 	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	j = ft_strlen(s1);
+	while (ft_strchr(set, s1[i]))
 	{
-		str[i] = s1[i];
 		i++;
 	}
-	while (s2[j] != '\0')
+	while (j > i && ft_strchr(set, s1[j]))
 	{
-		str[i + j] = s2[j];
-		j++;
+		j--;
 	}
-	str[i + j] = '\0';
-	return (str);
+	return (ft_substr(s1, i, ft_strlen(s1) - i));
 }
