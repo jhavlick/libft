@@ -20,7 +20,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	if (!n)
 	{
-		return (NULL);
+		return (0);
 	}
 	src1 = (unsigned char *)s1;
 	src2 = (unsigned char *)s2;

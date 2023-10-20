@@ -18,22 +18,25 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*str;
 
+	if (s == NULL)
+		return (0);
+	j = ft_strlen((char *)s);
+	if (j < start)
+		len = 0;
+	else if (len > j - start)
+		len = j - start;
+	i = 0;
 	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	i = 0;
-	j = 0;
-	while (s[i])
+	while (len--)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str[i] = s[start];
+		start++;
 		i++;
 	}
-	str[j] = '\0';
+	str[i] = '\0';
 	return (str);
 }
